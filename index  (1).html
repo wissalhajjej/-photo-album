@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="My Photo Album" />
+    <title>My Photo Album</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #fdf6f0;
+      }
+
+      .navbar {
+        background-color: #e8614d !important;
+      }
+
+      .navbar-brand strong {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.4rem;
+        color: #fff;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, #e8614d, #f4a261);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .hero-section h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .hero-section p {
+        font-size: 1.1rem;
+        font-weight: 300;
+        max-width: 500px;
+        margin: 0 auto 25px;
+        opacity: 0.9;
+      }
+
+      .hero-section .btn-primary {
+        background-color: white;
+        color: #e8614d;
+        border: none;
+        font-weight: 500;
+        border-radius: 30px;
+        padding: 10px 28px;
+      }
+
+      .hero-section .btn-primary:hover {
+        background-color: #fdf6f0;
+      }
+
+      .hero-section .btn-outline-light {
+        border-radius: 30px;
+        padding: 10px 28px;
+      }
+
+      .album {
+        background-color: #fdf6f0;
+        padding: 50px 0;
+      }
+
+      .card {
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(232, 97, 77, 0.2);
+      }
+
+      .card img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .card-body {
+        padding: 15px 18px;
+      }
+
+      .card-text {
+        font-size: 0.88rem;
+        color: #666;
+        margin-bottom: 12px;
+      }
+
+      .btn-outline-secondary {
+        border-radius: 20px;
+        font-size: 0.8rem;
+        color: #e8614d;
+        border-color: #e8614d;
+      }
+
+      .btn-outline-secondary:hover {
+        background-color: #e8614d;
+        color: white;
+      }
+
+      .text-body-secondary {
+        font-size: 0.8rem;
+        color: #aaa !important;
+      }
+
+      .section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #e8614d;
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+      }
+
+      footer a {
+        color: #ffe0d0;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: white;
+      }
+
+      footer p {
+        margin: 4px 0;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-dark shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"
+            stroke="white" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" class="me-2" viewBox="0 0 24 24">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <strong>My Album</strong>
+        </a>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <h1>Welcome to My Album 📸</h1>
+      <p>A collection of my favorite photos. Scroll down and enjoy the moments I captured!</p>
+      <a href="#gallery" class="btn btn-primary me-2">See Photos</a>
+      <a href="#" class="btn btn-outline-light">About Me</a>
+    </section>
+
+    <main id="gallery">
+      <div class="album">
+        <div class="container">
+          <h2 class="section-title">My Collection</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+           
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Mountain view" />
+                <div class="card-body">
+                  <p class="card-text">A beautiful mountain view I took during my trip last summer. The air was so fresh!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">3 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Beach" />
+                <div class="card-body">
+                  <p class="card-text">Sunset at the beach. The colors were incredible and the water was so calm and clear.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">5 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+  
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80" alt="Forest" />
+                <div class="card-body">
+                  <p class="card-text">A quiet walk in the forest. It felt peaceful and I loved the way the light came through the trees.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">7 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&q=80" alt="City" />
+                <div class="card-body">
+                  <p class="card-text">City lights at night. I took this from the rooftop and it was absolutely worth the climb up!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1444930694458-01babf71870c?w=600&q=80" alt="Flowers" />
+                <div class="card-body">
+                  <p class="card-text">Spring flowers in the park. These were blooming everywhere and the smell was amazing too.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">4 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&q=80" alt="Waterfall" />
+                <div class="card-body">
+                  <p class="card-text">A waterfall I found during a hike. I got a little wet but the photo was totally worth it!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">6 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Road" />
+                <div class="card-body">
+                  <p class="card-text">An empty road on the way home. I pulled over just to take this photo — no regrets at all.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">11 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=600&q=80" alt="Lake" />
+                <div class="card-body">
+                  <p class="card-text">A calm lake in the early morning. The reflection of the trees on the water was so beautiful.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">8 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Snow mountain" />
+                <div class="card-body">
+                  <p class="card-text">Snow-covered peaks in winter. It was freezing cold but the view made everything worthwhile.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">12 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>📷 My Photo Album — Made with love</p>
+        <p><a href="#">Back to top ↑</a></p>
+        <p style="margin-top:10px; opacity:0.75; font-size:0.8rem;">© 2025 — All photos taken by me</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
